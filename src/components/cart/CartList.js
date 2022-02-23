@@ -14,7 +14,7 @@ const CartList = ({ value }) => {
         <h1 className="pb-2 font-medium text-4xl uppercase">CART</h1>
       </div>
       <div className="text-sm font-medium">
-        <div className="py-3 px-5 md:grid grid-cols-4 list-header shadow-sm">
+        <div className="hidden py-3 px-5 lg:grid grid-cols-4 shadow-sm">
           <div className="flex justify-start">
             <span className="font-semibold">PRODUCT NAME</span>
           </div>
