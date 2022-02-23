@@ -36,7 +36,9 @@ const Header = () => {
   return (
     <div className="px-5 py-6 shadow-sm flex justify-between items-center md:px-10 lg:px-5 xl:px-28">
       <div>
-        <Link to="/">LOGO</Link>
+        <Link to="/" className="font-bold">
+          LOGO
+        </Link>
       </div>
       <div>
         <ul className="flex gap-x-1">
