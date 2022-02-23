@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -50,9 +51,10 @@ const Categories = () => {
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {data.map((category, index) => (
-          <div
+          <Link
             key={index}
             className="category bg-red-500 h-64 relative group cursor-pointer"
+            to={`/categories/${category.title}`}
           >
             <img
               src={category.image}
@@ -62,7 +64,7 @@ const Categories = () => {
             <h2 className="capitalize text-xl font-normal text-white absolute top-28 left-10 transition opacity-0 group-hover:opacity-100">
               {category.title}
             </h2>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

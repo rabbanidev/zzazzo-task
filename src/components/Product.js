@@ -1,8 +1,8 @@
 import React from "react";
 import Rateing from "rc-rate";
 import { FaRegHeart } from "react-icons/fa";
-import { useGlobalContext } from "../../hooks/context";
-
+import { Link } from "react-router-dom";
+import { useGlobalContext } from "../hooks/context";
 import "rc-rate/assets/index.css";
 
 const Product = ({ data }) => {
@@ -29,8 +29,10 @@ const Product = ({ data }) => {
       </div>
       <div className="md:col-span-4">
         <div className="md:pr-10">
-          <h1 className="text-2xl font-bold mb-2 lg:mb-6">{product.title}</h1>
-          <p className="text-gray-500 mb-2 lg:mb-6">{product.description}</p>
+          <Link className="text-2xl font-bold" to={`/product/${product.id}`}>
+            {product.title}
+          </Link>
+          <p className="text-gray-500 my-2 lg:my-6">{product.description}</p>
           <div className="mb-2 flex items-center gap-x-5 lg:mb-6">
             <h3 className="text-lg line-through">${product.price}</h3>
             <h3 className="text-2xl font-bold">${product.price}</h3>

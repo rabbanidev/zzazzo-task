@@ -4,6 +4,25 @@ import { FiShoppingBag, FiUser } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../hooks/context";
 
+const data = [
+  {
+    title: "Men's",
+    to: "/categories/men's clothing",
+  },
+  {
+    title: "Women's",
+    to: "women's clothing",
+  },
+  {
+    title: "Jewelery",
+    to: "/categories/jewelery",
+  },
+  {
+    title: "Electronics",
+    to: "/categories/electronics",
+  },
+];
+
 const Header = () => {
   const value = useGlobalContext();
 
@@ -42,18 +61,11 @@ const Header = () => {
       </div>
       <div className="hidden lg:block">
         <ul className="flex gap-x-1">
-          <li className="px-3 py-2">
-            <a href="#">Men's</a>
-          </li>
-          <li className="px-3 py-2">
-            <a href="#">Women's</a>
-          </li>
-          <li className="px-3 py-2">
-            <a href="#">Electronics</a>
-          </li>
-          <li className="px-3 py-2">
-            <a href="#">Jewelery</a>
-          </li>
+          {data.map((item, index) => (
+            <li key={index} className="px-3 py-2">
+              <Link to={item.to}>{item.title}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="flex">
