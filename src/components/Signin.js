@@ -60,8 +60,8 @@ const Signin = () => {
   };
 
   return (
-    <div className="grid grid-cols-5">
-      <div className="col-span-2 px-5 pt-20 md:px-10 lg:px-5 xl:px-28">
+    <div className="grid grid-cols-1 lg:grid-cols-5">
+      <div className="lg:col-span-2 px-5 pt-20 md:px-10 lg:px-5 xl:px-28">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h1 className="text-xl font-bold mb-2 md:text-4xl lg:mb-6">Signin</h1>
           <div className="mb-5">

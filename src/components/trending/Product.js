@@ -12,7 +12,7 @@ const Product = ({ data }) => {
       productId: product.id,
       title: product.title,
       price: product.price,
-      image: product.price,
+      image: product.image,
       size: "sm",
       quantity: 1,
     };

@@ -40,7 +40,7 @@ const Header = () => {
           LOGO
         </Link>
       </div>
-      <div>
+      <div className="hidden lg:block">
         <ul className="flex gap-x-1">
           <li className="px-3 py-2">
             <a href="#">Men's</a>
